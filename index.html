@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Portfolio - Desktop Computer</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323:wght@400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Grid overlay -->
+    <div class="grid-overlay"></div>
+    
+    <!-- Corner accent elements -->
+    <div class="corner-accent top-left"></div>
+    <div class="corner-accent top-right"></div>
+    <div class="corner-accent bottom-left"></div>
+    <div class="corner-accent bottom-right"></div>
+    
+    <!-- Background animated elements -->
+    <div class="background-elements">
+        <div class="circuit-line horizontal"></div>
+        <div class="circuit-line horizontal"></div>
+        <div class="circuit-line vertical"></div>
+        <div class="circuit-line vertical"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="desktop-container" id="desktopContainer">
+        <div class="computer-setup">
+            <!-- Monitor -->
+            <div class="monitor">
+                <div class="screen">
+                    <!-- Shutdown Screen -->
+                    <div class="shutdown-screen" id="shutdownScreen">
+                        <div>SYSTEM SHUTTING DOWN...</div>
+                    </div>
+                    
+                    <!-- Boot Sequence -->
+                    <div class="boot-sequence" id="bootSequence">
+                        <div class="boot-line">BIOS v2.1.0</div>
+                        <div class="boot-line">Memory Test: 16GB OK</div>
+                        <div class="boot-line">CPU: Intel Core i7-12700K</div>
+                        <div class="boot-line">GPU: NVIDIA RTX 3080</div>
+                        <div class="boot-line">Initializing system...</div>
+                        <div class="boot-line">Loading operating system...</div>
+                        <div class="boot-line">Welcome to RETRO-OS v1.0</div>
+                        <div class="boot-line">System ready.</div>
+                    </div>
+                    
+                    <div class="screen-content" id="screenContent">
+                        <!-- Home Content -->
+                        <div class="page-content active" id="home">
+                            <div class="landing-container">
+                                <!-- Floating Background Elements -->
+                                <div class="floating-elements">
+                                    <div class="floating-dot"></div>
+                                    <div class="floating-dot"></div>
+                                    <div class="floating-dot"></div>
+                                    <div class="floating-dot"></div>
+                                    <div class="floating-dot"></div>
+                                </div>
+                                
+                                <!-- Retro Scanning Lines -->
+                                <div class="retro-lines">
+                                    <div class="retro-line"></div>
+                                    <div class="retro-line"></div>
+                                    <div class="retro-line"></div>
+                                </div>
+                                
+                                <!-- Hero Section -->
+                                <div class="hero-section">
+                                    <h1 class="hero-title">MD. MORAKIB HOSSAIN</h1>
+                                    <h2 class="hero-subtitle">Machine Learning Enthusiast</h2>
+                                    <p class="hero-description">Building intelligent systems and exploring data-driven solutions<br>with a passion for competitive programming</p>
+                                </div>
+                                
+                                <!-- Navigation Grid -->
+                                <div class="nav-grid">
+                                    <div class="nav-card" onclick="navigateToPage('projects')">
+                                        <span class="nav-card-key">[P]</span>
+                                        <div class="nav-card-title">PROJECTS</div>
+                                        <div class="nav-card-desc">Explore my latest work and creative solutions</div>
+                                    </div>
+                                    
+                                    <div class="nav-card" onclick="navigateToPage('about')">
+                                        <span class="nav-card-key">[A]</span>
+                                        <div class="nav-card-title">ABOUT</div>
+                                        <div class="nav-card-desc">Learn about my skills and experience</div>
+                                    </div>
+                                    
+                                    <div class="nav-card" onclick="navigateToPage('contact')">
+                                        <span class="nav-card-key">[C]</span>
+                                        <div class="nav-card-title">CONTACT</div>
+                                        <div class="nav-card-desc">Get in touch for collaborations</div>
+                                    </div>
+                                    
+                                    <div class="nav-card" onclick="navigateToPage('resume')">
+                                        <span class="nav-card-key">[R]</span>
+                                        <div class="nav-card-title">RESUME</div>
+                                        <div class="nav-card-desc">View my professional background</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- System Info -->
+                                <div class="system-info">
+                                    <span>RETRO-OS v1.0</span>
+                                    <span>System: Online</span>
+                                    <span>Keys: [P] [A] [C] [R] or click cards</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects Page -->
+                        <div class="page-content" id="projects">
+                            <button class="back-btn" onclick="goBack()">ESC</button>
+                            <div class="page-title">PROJECTS.EXE</div>
+                            <div class="project-nav-info">
+                                USE ↑↓ ARROW KEYS TO NAVIGATE • ENTER TO SELECT • MOUSE HOVER TO FOCUS
+                            </div>
+                            <div class="project-grid">
+                                <div class="project-item">
+                                    <strong>SWORD - WORD GAME</strong><br>
+                                    Interactive word game with point rewards for word formation<br>
+                                    <em>Tech: HTML, CSS, JavaScript, Node.js, Express.js, Socket.IO</em>
+                                </div>
+                                <div class="project-item">
+                                    <strong>BANKAI - SECURITY CLONE</strong><br>
+                                    Clone login page integrated with Telegram bot for cybersecurity<br>
+                                    <em>Tech: Telegram-bot, HTML, CSS, JavaScript</em>
+                                </div>
+                                <div class="project-item">
+                                    <strong>CHUPI_CHUPI - ANONYMOUS MESSAGING</strong><br>
+                                    Anonymous messaging service through simple web interface<br>
+                                    <em>Tech: Telegram-bot, HTML, CSS, JavaScript</em>
+                                </div>
+                                <div class="project-item">
+                                    <strong>URL-PINGER-APP</strong><br>
+                                    URL monitoring application for automatic website pinging<br>
+                                    <em>Tech: Supabase, React, CSS</em>
+                                </div>
+                                <div class="project-item">
+                                    <strong>ANIME_CHARACTER_FIGHT</strong><br>
+                                    Interactive anime character fighting game with animations<br>
+                                    <em>Tech: HTML, CSS, JavaScript, Game Development</em>
+                                </div>
+                                <div class="project-item">
+                                    <strong>SPACESHOT</strong><br>
+                                    Space-themed shooting game with dynamic gameplay mechanics<br>
+                                    <em>Tech: HTML, CSS, JavaScript, Game Development</em>
+                                </div>
+                                <div class="project-item">
+                                    <strong>PIGEON-MESSAGING-APP</strong><br>
+                                    Real-time messaging application with modern interface<br>
+                                    <em>Tech: React, Node.js, Socket.IO, Modern Web Technologies</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- About Page -->
+                        <div class="page-content" id="about">
+                            <button class="back-btn" onclick="goBack()">ESC</button>
+                            <div class="page-title">ABOUT.TXT</div>
+                            <div>
+                                MACHINE LEARNING ENTHUSIAST<br>
+                                RAJSHAHI UNIVERSITY OF ENGINEERING & TECHNOLOGY<br>
+                                <br>
+                                PROFILE:<br>
+                                > BUILDING INTELLIGENT SYSTEMS<br>
+                                > DATA-DRIVEN SOLUTIONS<br>
+                                > COMPETITIVE PROGRAMMING (750+ PROBLEMS)<br>
+                                > CURRENT CGPA: 3.49 (4TH SEM: 3.77)<br>
+                                <br>
+                                TECHNICAL SKILLS:<br>
+                                > LANGUAGES: PYTHON, C++, JAVA, JAVASCRIPT, SQL<br>
+                                > ML/AI: MACHINE LEARNING, NLP, DATA VISUALIZATION<br>
+                                > WEB: HTML, CSS, NODE.JS, EXPRESS.JS<br>
+                                > TOOLS: FLUTTER, SUPABASE, PYGAME, FASTAPI<br>
+                                <br>
+                                ACHIEVEMENTS:<br>
+                                > AI HACKATHON 2025 (1ST PLACE)<br>
+                                > GREENCON HACKATHON 2025 (4TH PLACE)<br>
+                                > CODEFORCES MAX RATING: 1265<br>
+                                > SMP CTF 2024 (17TH PLACE)<br>
+                                <br>
+                                ALWAYS LEARNING, ALWAYS BUILDING.
+                            </div>
+                        </div>
+
+                        <!-- Contact Page -->
+                        <div class="page-content" id="contact">
+                            <button class="back-btn" onclick="goBack()">ESC</button>
+                            <div class="page-title">CONTACT.BAT</div>
+                            <div>
+                                GET IN TOUCH:<br>
+                                <br>
+                                EMAIL: <a href="mailto:morakibnashit@gmail.com" class="contact-link">morakibnashit@gmail.com</a><br>
+                                PHONE: <a href="tel:+8801842363070" class="contact-link">+880-1842363070</a><br>
+                                LINKEDIN: <a href="https://linkedin.com/in/morakib-hossain-837250255" target="_blank" class="contact-link">linkedin.com/in/morakib-hossain-837250255</a><br>
+                                GITHUB: <a href="https://github.com/morakib" target="_blank" class="contact-link">github.com/morakib</a><br>
+                                LOCATION: Rajshahi, Bangladesh<br>
+                            </div>
+                            <div class="contact-form">
+                                <div class="form-group">
+                                    <label>NAME:</label>
+                                    <input type="text" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label>MESSAGE:</label>
+                                    <textarea rows="4" placeholder="Your message here..."></textarea>
+                                </div>
+                                <button class="submit-btn">SEND MESSAGE</button>
+                            </div>
+                        </div>
+
+                        <!-- Resume Page -->
+                        <div class="page-content" id="resume">
+                            <button class="back-btn" onclick="goBack()">ESC</button>
+                            <div class="page-title">RESUME.DOC</div>
+                            <div>
+                                MD. MORAKIB HOSSAIN<br>
+                                <a href="tel:+8801842363070" class="contact-link">+880-1842363070</a> | <a href="mailto:morakibnashit@gmail.com" class="contact-link">morakibnashit@gmail.com</a><br>
+                                <br>
+                                EDUCATION:<br>
+                                RAJSHAHI UNIVERSITY OF ENGINEERING & TECHNOLOGY<br>
+                                B.ENG IN COMPUTER SCIENCE & ENGINEERING (2022-PRESENT)<br>
+                                CURRENT CGPA: 3.49 (4TH SEMESTER: 3.77)<br>
+                                <br>
+                                EXPERIENCE:<br>
+                                QASIM - AI BACKEND ENGINEER (MAY 2025 - JUNE 2025)<br>
+                                - DEVELOPED INTELLIGENT BACKEND SYSTEMS<br>
+                                - INTEGRATED ML SOLUTIONS FOR AI APPLICATIONS<br>
+                                - HACKATHON PARTICIPATION<br>
+                                <br>
+                                TECHNICAL SKILLS:<br>
+                                - LANGUAGES: PYTHON, C++, JAVA, JAVASCRIPT, SQL<br>
+                                - ML/AI: MACHINE LEARNING, NLP, DATA VISUALIZATION<br>
+                                - WEB: HTML, CSS, NODE.JS, EXPRESS.JS, SOCKET.IO<br>
+                                - TOOLS: FLUTTER, SUPABASE, PYGAME, FASTAPI<br>
+                                <br>
+                                ACHIEVEMENTS:<br>
+                                - AI HACKATHON 2025 (1ST PLACE)<br>
+                                - GREENCON HACKATHON 2025 (4TH PLACE)<br>
+                                - CODEFORCES MAX RATING: 1265<br>
+                                - 750+ ALGORITHMIC PROBLEMS SOLVED<br>
+                                <br>
+                                <a href="#" class="pdf-download-link" onclick="openPdfLink()" target="_blank">[DOWNLOAD PDF VERSION]</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="power-button" id="powerButton"></div>
+                <div class="monitor-stand"></div>
+                <div class="monitor-base"></div>
+    
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
