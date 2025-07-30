@@ -136,7 +136,7 @@ function activateCurrentProject() {
     }
 }
 
-// Go back function
+// Go back function (moved outside DOMContentLoaded to make it globally accessible)
 function goBack() {
     if (!systemPowered) return; // Prevent navigation when system is off
     if (isZoomed) {
@@ -151,6 +151,14 @@ function goBack() {
             document.getElementById('home').classList.add('active');
             currentPage = 'home';
         }, 800);
+    }
+}
+
+// Close modal function (moved outside DOMContentLoaded to make it globally accessible)
+function closeModal() {
+    const modal = document.querySelector('.project-modal');
+    if (modal) {
+        modal.remove();
     }
 }
 
@@ -179,6 +187,15 @@ document.addEventListener('DOMContentLoaded', function() {
             'escape': 'back'
         };
         
+        // Check if modal is open and handle ESC key FIRST (highest priority)
+        const modal = document.querySelector('.project-modal');
+        if (modal && (key === 'escape' || e.key === 'Escape')) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeModal();
+            return;
+        }
+        
         // Handle project navigation
         if (currentPage === 'projects' && isZoomed) {
             if (key === 'arrowup') {
@@ -196,9 +213,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        if (keyMap[key]) {
+        if (keyMap[key] || e.key === 'Escape') {
             e.preventDefault();
-            if (key === 'escape') {
+            if (key === 'escape' || e.key === 'Escape') {
                 goBack();
             } else {
                 navigateToPage(keyMap[key]);
@@ -236,13 +253,33 @@ function showProjectModal(projectName, links) {
             closeModal();
         }
     });
-}
-
-function closeModal() {
-    const modal = document.querySelector('.project-modal');
-    if (modal) {
-        modal.remove();
+    
+    // Add touch support for modal close button
+    const closeBtn = modal.querySelector('.modal-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            this.style.background = '#aa0000';
+        });
+        
+        closeBtn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            this.style.background = '';
+            closeModal();
+        });
     }
+    
+    // Add touch support for project links
+    const projectLinks = modal.querySelectorAll('.project-link');
+    projectLinks.forEach(link => {
+        link.addEventListener('touchstart', function(e) {
+            this.style.background = 'rgba(0, 255, 0, 0.15)';
+        });
+        
+        link.addEventListener('touchend', function(e) {
+            this.style.background = '';
+        });
+    });
 }
 
 // Project item interactions
